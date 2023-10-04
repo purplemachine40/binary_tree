@@ -1,4 +1,5 @@
 #pragma once
 
 int InitRandomNumberGenerator(void);
-int GenerateRandomNumber(int min, int max);
+int GenerateRandomInt(int min, int max);
+float GenerateRandomFloat(float min, float max);

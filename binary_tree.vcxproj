@@ -128,12 +128,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BinaryTree.c" />
+    <ClCompile Include="BinaryTreeGeneric.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="SensorData.c" />
     <ClCompile Include="Utils.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BinaryTree.h" />
+    <ClInclude Include="BinaryTreeGeneric.h" />
+    <ClInclude Include="SensorData.h" />
     <ClInclude Include="Utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
