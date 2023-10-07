@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "BinaryTreeGeneric.h"
@@ -53,6 +54,26 @@ void InOrderTraversal(struct TreeNode *root, void (*print)(const void *))
     InOrderTraversal(root->left, print);
     print(root->data);
     InOrderTraversal(root->right, print);
+}
+
+struct TreeNode *FindNode(struct TreeNode *root, const void *data, size_t dataSize, int (*compare)(const void *, const void *))
+{
+    int compareResult;
+
+    while (root != NULL)
+    {
+        compareResult = compare(data, root->data);
+        if (compareResult == 0)
+        {
+            return root;
+        }
+        else
+        {
+            root = (compareResult < 0) ? root->left : root->right;
+        }
+    }
+
+    return root;
 }
 
 void FreeTree(struct TreeNode *root)
