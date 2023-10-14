@@ -1,3 +1,5 @@
+#pragma once
+
 struct TreeNode
 {
     void *data;
@@ -12,4 +14,6 @@ struct TreeNode *InsertNode(struct TreeNode *root, const void *data, size_t data
 void InOrderTraversal(struct TreeNode *root, void (*print)(const void *));
 struct TreeNode *FindNode(struct TreeNode *root, const void *data, size_t dataSize,
                           int (*compare)(const void *, const void *));
+struct TreeNode *DeleteNode(struct TreeNode *root, const void *data, size_t dataSize,
+                            int (*compare)(const void *, const void *));
 void FreeTree(struct TreeNode *root);

@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-int InitRandomNumberGenerator(void) {
-    srand(time(NULL));
+void InitRandomNumberGenerator(void) {
+    srand((unsigned int)time(NULL));
 }
 
 int GenerateRandomInt(int min, int max) {
